@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="mylogo.png" alt="Company Logo">
+            <img src="2ndlog.png" alt="Company Logo">
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-items">
+            <div class="search-container">
+                <form action="#" method="get">
+                    <input type="search" placeholder="Search For events" aria-label="Search">
+                    <button type="submit" aria-label="Submit Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="login-container">
+                <button id="loginBtn" class="login-btn">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit" class="login-submit-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Banner Section -->
+        <section class="hero-banner" id="hero-banner">
+            <div class="hero-content">
+                <h1>BOOK YOUR EVENTS</h1>
+                <p>ANY TIME ,ANY WHERE</p>
+                <button class="cta-button">Get Started</button>
+            </div>
+        </section>
+        
+        <section class="calendar-section">
+            <h2>SELECT DATE</h2>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                    <h3 id="currentMonth">Month Year</h3>
+                    <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="days" id="calendarDays">
+                </div>
+            </div>
+        </section>
+        
+    <div class="month-images">
+            <img id="jan-img" src="january.jpg" alt="January">
+            <img id="feb-img" src="feb.jpg" alt="February">
+            <img id="mar-img" src="march.jpg" alt="March">
+            <img id="apr-img" src="april.jpg" alt="April">
+            <img id="may-img" src="may.jpg" alt="May">
+            <img id="jun-img" src="june.jpg" alt="June">
+            <img id="jul-img" src="july.jpg" alt="July">
+            <img id="aug-img" src="aug.jpg" alt="August">
+            <img id="sep-img" src="sept.jpg" alt="September">
+            <img id="oct-img" src="october.jpg" alt="October">
+            <img id="nov-img" src="nov.jpg" alt="November">
+            <img id="dec-img" src="december.jpg" alt="December">
+    </div>
+
+    <div class="events-section">
+        <h2>ADD YOUR EVENTS</h2>
+        <div class="add-event-form">
+            <h3>Add New Events</h3>
+            <form id="addEventForm">
+                <div class="form-group">
+                    <label for="eventName">Event Name:</label>
+                    <input type="text" id="eventName" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventDate">Selected Date</label>
+                    <input type="text" id="eventDate" name="eventDate" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="eventTime">Event Time</label>
+                    <select id="eventTime" name="eventTime" required>
+                        <option value="">Select a time</option>
+                        <option value="09:00">09:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="13:00">01:00 PM</option>
+                        <option value="14:00">02:00 PM</option>
+                        <option value="15:00">03:00 PM</option>
+                        <option value="16:00">04:00 PM</option>
+                        <option value="17:00">05:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="eventType">Event Type</label>
+                    <select id="eventType" name="eventType" required>
+                        <option value="">Select event type</option>
+                        <option value="meeting">Meeting</option>
+                        <option value="conference">Conference</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="seminar">Seminar</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="attendees">Number of Attendees</label>
+                    <input type="number" id="attendees" name="attendees" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="userName">Your Name</label>
+                    <input type="text" id="userName" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="userEmail">Email</label>
+                    <input type="email" id="userEmail" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="userPhone">Phone</label>
+                    <input type="tel" id="userPhone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventLocation">Event Location:</label>
+                    <input type="text" id="eventLocation" required>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="notes" rows="3"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Add Event</button>
+            </form>
+        </div>
+        <div class="events-list" id="eventsList">
+            <!-- Events will be added here dynamically -->
+        </div>
+    </div>
+</main>
+</div>
+
+
+    
+
+    <script src="script.js"></script>   
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 MY EVENTS. All rights reserved.</p>
+            <p>
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Service</a>
+            </p>
+            <p>Follow us on 
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>, 
+                <a href="#"><i class="fa-brands fa-square-twitter"></i></a>, 
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
