@@ -45,4 +45,6 @@ To view and run this project locally on your machine:
    ```
 3. **Open the application:**
    Simply double-click the `index.html` file to open it in your preferred web browser, or use a development server extension like *Live Server* in VS Code.
+## 📄 License
 
+This project is licensed under the MIT License - feel free to customize, modify, and build upon it as you like!
